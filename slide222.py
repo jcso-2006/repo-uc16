@@ -1,3 +1,6 @@
+import mysql.connector
+from mysql.connector import Error
+
 def criar_tabela(nome_tabela):
     try:
         # Conectar ao servidor MySQL
