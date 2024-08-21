@@ -1,31 +1,33 @@
-def criar_banco_dados(nome_banco):
+import mysql.connector
+from mysql.connector import Error
+
+def banco_de_dados(nome_banco):
     try:
-        # Conectar ao servidor MySQL
-        conexao = mysql.connector.connect(
-            host="localhost",
-            user="seu_usuario",
-            password="sua_senha"
+        conn = mysql.connector.connect(
+            host='localhost',
+            user='root',  
+            password=''  
         )
-
-        # Criar um cursor para executar comandos SQL
-        cursor = conexao.cursor()
-
-        # Criar o banco de dados
-        cursor.execute("CREATE DATABASE {}".format(nome_banco))
-
-        print("Banco de dados", nome_banco, "criado com sucesso!")
-    except mysql.connector.Error as e:
-        print("Erro ao criar o banco de dados:", e)
+        
+        if conn.is_connected():
+            cursor = conn.cursor()
+            cursor.execute(f"CREATE DATABASE {nome_banco}")
+            print(f"Banco de dados '{nome_banco}' criado com sucesso!")
+        else:
+            print("Erro ao conectar ao MySQL.")
+        
+    except Error as e:
+        print(f"Erro: {e}")
+    
     finally:
-        if conexao:
-            conexao.close()
+        if conn.is_connected():
+            cursor.close()
+            conn.close()
 
-def main():
-    print("Bem-vindo! Este programa irá criar um novo banco de dados no MySQL.")
-    nome_banco = input("Por favor, digite o nome do banco de dados que deseja criar: ")
 
-    criar_banco_dados(nome_banco)
-
+def cap():
+    nome_banco = input("Digite o nome do banco de dados que deseja criar: ")  
+    banco_de_dados(nome_banco)
+    
 if __name__ == "__main__":
     main()
-
