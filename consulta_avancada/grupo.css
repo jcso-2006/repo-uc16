@@ -1,0 +1,308 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+  
+    font-family: "Raleway", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+   
+/* Conteudo PAG individual*/
+/* Grupo de itens */
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-item{
+    width: 150vh;
+    height: 85vh;
+    background-color: #D9D9D9;
+    margin: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow-y: scroll;
+}
+.container-item::-webkit-scrollbar {
+    width: 12px;    
+    height: 15px;
+}
+
+.container-item::-webkit-scrollbar-track {
+    background: #344459;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.container-item::-webkit-scrollbar-thumb {
+    background-color: #7696BF;
+    border-radius: 20px;
+    
+}
+
+#container-itens{
+    width: 480px;
+    height: 90%;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.categoria{
+    width: 440px;
+    height: 203px;
+    background-color: #7A8BA1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.img-itens{
+    height: 100px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: #344459;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+/* Páginas */
+.container-itens{
+    width: 150vh;
+    height: 80vh;
+    background-color: #344459;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    overflow-y: scroll;
+}
+
+.container-itens::-webkit-scrollbar {
+    width: 12px;    
+    height: 15px;
+}
+
+.container-itens::-webkit-scrollbar-track {
+    background: #344459;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.container-itens::-webkit-scrollbar-thumb {
+    background-color: #7696BF;
+    border-radius: 20px;
+    
+}
+
+.box-itens{
+    height: 98%;
+    width: 95%;
+    margin: 5px;
+}
+
+.itens{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px;
+}
+
+.img-item{
+    width: 160px;
+    height: 170px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.list-itens{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F6F6F6;
+    margin: 10px;
+}
+
+li{
+    margin: 5px;
+}
+
+
+
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    /* Tirar dps */
+    overflow-y: hidden;
+  }
+  
+  /*header*/
+  header .header {
+    background-color: #bfb8bd;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  /* Conteudo cima */
+  /* Logo */
+  #logo {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 150px;
+    height: auto;
+    border-radius: 50px;
+    margin-left: 10px;
+  }
+  
+  /* Busca em cima */
+  #divBusca {
+    background-color: #f6f6f6;
+    width: 300px;
+    padding: 1px;
+    margin: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 10%;
+    border-radius: 50px;
+  }
+  
+  #txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+    width: 260px;
+    border-radius: 50px;
+  }
+  
+  .search {
+    margin-right: 5px;
+    font-size: 30px;
+  }
+  
+  /* 3 Icons na parte de cima */
+  .icon-top {
+    width: 150px;
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    font-size: 35px;
+    justify-content: space-around;
+  }
+  
+  .boxin {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .icon {
+    color: #f6f6f6;
+  }
+  
+  .boxin:hover {
+    background-color: #344459;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Main */
+  main {
+    flex: 2;
+    height: 85vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-sidebar {
+    background-color: #344459;
+    height: 100%;
+    margin-top: 50px;
+  }
+  
+  .nav-sidebar li {
+    margin-top: 20px;
+  }
+  
+  .nav-sidebar li:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 18vw;
+  }
+  
+  .button {
+    padding: 20px 5px;
+  
+    margin-left: 40px;
+    font-size: 20px;
+  }
+  
+  a {
+    color: #f6f6f6;
+    letter-spacing: 2px;
+  }
+  
+  a:hover{
+    color: #566f8f;
+  }
+  
+  .button:hover {
+    background-color: #17181a;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  /*Totalmentee Provisorio */
+  
+  h2{
+    color: #000000;
+  }
+  
+  /* Conteudo */
+  .main-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .main-content {
+    width: 80%;
+    height: 100vh;
+    margin-top: 50px;
+    background-color: #566f8f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Conteudo PAG individual*/
